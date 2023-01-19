@@ -50,3 +50,7 @@ export const onShowCamperSuccess = (camper) => {
 export const onUpdateCamperSuccess = () => {
     messageContainer.innerText = 'Update was successful :)'
 }
+
+export const onDeleteCamperSuccess = () => {
+    messageContainer.innerText= 'Delete was successful :)'
+}
