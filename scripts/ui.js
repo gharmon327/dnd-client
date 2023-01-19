@@ -33,6 +33,20 @@ export const onShowCamperSuccess = (camper) => {
         <p>${camper.class}</p>
         <p>${camper.size}</p>
         <p>${camper._id}</p>
+
+        <form data-id="${camper._id}">
+        <input type="text" name="firstName" value="${camper.firstName}"/>
+        <input type="text" name="lastName" value="${camper.lastName}"/>
+        <input type="text" name="class" value="${camper.class}"/>
+        <input type="number" name="size" value="${camper.size}"/>
+        <input type="submit" value="Update Camper"/>
+      </form>
+
+      <button data-id="${camper._id}">Delete Camper</button>
     `
 	showCamperContainer.appendChild(div)
+}
+
+export const onUpdateCamperSuccess = () => {
+    messageContainer.innerText = 'Update was successful :)'
 }
